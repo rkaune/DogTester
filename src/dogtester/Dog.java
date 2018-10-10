@@ -5,6 +5,7 @@ public class Dog {
 
     private String dogName, dogBreed;
     private int aggression, hunger;
+    //aggression = 5; this is bad :(
 
     //constructors
     public Dog() {
@@ -30,6 +31,27 @@ public class Dog {
         aggression = (int) (Math.random() * 10) + 1;
         hunger = (int) (Math.random() * 10) + 1;
     }
+       /**
+     * This method allows the user to set the aggression of the dog
+     * pre: needs an aggression value
+     * post: sets the aggression value
+     */
+    public int getAggression(){
+        return aggression;
+    }
+    /**
+     * This method allows the user to set the aggression of the dog
+     * pre: needs an aggression value
+     * post: sets the aggression value
+     */
+    public void setAggression(int aggres){
+        aggression = aggres;
+    }
+    /**
+     * This method allows for a dog to friendly bark
+     * pre: none
+     * post: the dog object barks
+     */
 
     public void barkFriendly() {
         System.out.println("Arf! Arf!");
@@ -37,6 +59,10 @@ public class Dog {
 
     public void barkAngry() {
         System.out.println("GRR! RRRFFF!");
+    }
+    
+    public static void caringForYourDog(){
+        System.out.println("This is how you care for your dog");
     }
 
     //method to display all info of the Dog
